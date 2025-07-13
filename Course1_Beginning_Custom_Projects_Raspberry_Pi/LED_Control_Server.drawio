@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="25.0.3">
+  <diagram name="Page-1" id="JYLnY_VoX2dtefAGrSTP">
+    <mxGraphModel dx="2074" dy="1153" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BEj_wnVYlBQh6ihUWh1g-2" value="Rpi 4B" style="rounded=1;whiteSpace=wrap;html=1;fontSize=25;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="510" width="440" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="BEj_wnVYlBQh6ihUWh1g-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BEj_wnVYlBQh6ihUWh1g-1" target="BEj_wnVYlBQh6ihUWh1g-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BEj_wnVYlBQh6ihUWh1g-9" value="GET Request&lt;br&gt;http://192.168.86.191:8080/led/on" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=17;" vertex="1" connectable="0" parent="BEj_wnVYlBQh6ihUWh1g-6">
+          <mxGeometry x="-0.5832" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BEj_wnVYlBQh6ihUWh1g-1" value="Client Machine&lt;div&gt;(i.e. My PC)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=25;" vertex="1" parent="1">
+          <mxGeometry x="230" y="80" width="370" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="BEj_wnVYlBQh6ihUWh1g-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BEj_wnVYlBQh6ihUWh1g-3" target="BEj_wnVYlBQh6ihUWh1g-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BEj_wnVYlBQh6ihUWh1g-10" value="call do_GET() method" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;" vertex="1" connectable="0" parent="BEj_wnVYlBQh6ihUWh1g-7">
+          <mxGeometry x="-0.0941" y="4" relative="1" as="geometry">
+            <mxPoint x="23" y="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BEj_wnVYlBQh6ihUWh1g-3" value="http server" style="rounded=1;whiteSpace=wrap;html=1;fontSize=25;" vertex="1" parent="1">
+          <mxGeometry x="240" y="630" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BEj_wnVYlBQh6ihUWh1g-4" value="LED" style="rounded=1;whiteSpace=wrap;html=1;fontSize=25;" vertex="1" parent="1">
+          <mxGeometry x="240" y="790" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BEj_wnVYlBQh6ihUWh1g-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="BEj_wnVYlBQh6ihUWh1g-5" target="BEj_wnVYlBQh6ihUWh1g-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BEj_wnVYlBQh6ihUWh1g-11" value="call LED.on()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=15;" vertex="1" connectable="0" parent="BEj_wnVYlBQh6ihUWh1g-8">
+          <mxGeometry x="-0.6471" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BEj_wnVYlBQh6ihUWh1g-5" value="MyHandler" style="rounded=1;whiteSpace=wrap;html=1;fontSize=25;" vertex="1" parent="1">
+          <mxGeometry x="440" y="710" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BEj_wnVYlBQh6ihUWh1g-13" value="&lt;b&gt;Explanation of server.py&lt;/b&gt;&lt;div&gt;&lt;br&gt;Running server.py on Rpi creates 3 objects: an http server, a MyHandler class, and an LED.&lt;br&gt;When the http server receives a request from a client it will call do_GET function defined in the MyHandler class.&lt;br&gt;The do_GET function checks the path of the URL and when it sees that the url ends with /led/on then it will call the on() method on the LED object.&lt;/div&gt;" style="text;overflow=hidden;rounded=0;align=left;verticalAlign=top;html=1;whiteSpace=wrap;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="10" y="900" width="820" height="160" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
