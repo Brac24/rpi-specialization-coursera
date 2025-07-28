@@ -11,6 +11,7 @@ Miguel recently updated his tutorial on react and flask project to use Vite inst
 To use Vite we need to have nodejs and npm installed first.
 Initially I used the command: sudo apt install nodejs
 The above line installed version 18 of nodejs but the most current is 22.
+Also Vite requires version 20 of nodejs to work.
 To update it I had to use a different repo than where apt gets its packages from.
 To use a different repo I ran: curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 After running the curl command I then installed with: sudo apt-get install nodejs -y and it installed version 22 of nodejs
