@@ -22,4 +22,6 @@ and the above command updated to version 11.
 
 After I setup nodejs and npm I did a bit more reading and found that nvm (Node Version Manager) was the recommended way of installing nodejs. Web development and its tools seems to be so saturated with updates and different ways of doing things because of how fast web dev tools change which can be a bit frustrating.
 
-
+The directory react-with-flask is the directory from which to run the react application.
+To run the react web server run: npm run dev
+Before that we need to run: npm install which should install all the node packages required for the react application.
