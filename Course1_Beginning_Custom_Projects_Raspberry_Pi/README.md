@@ -25,3 +25,14 @@ After I setup nodejs and npm I did a bit more reading and found that nvm (Node V
 The directory react-with-flask is the directory from which to run the react application.
 To run the react web server run: npm run dev
 Before that we need to run: npm install which should install all the node packages required for the react application.
+
+In the react-wit-flask directory we need to open two terminal and run the following:
+npm run dev (Runs the front end)
+npm run api (Runs the flask back end)
+
+Now when going to http://localhost:5173 you will see the front end along with a new line under the count button that displays the current time at the time that the page rendered. This time is requested and returned from the flask back end.
+
+
+The npm run api works due to adding a new line in package.json scripts section. Look at the api entry in there.
+
+We also forward calls made from the front end on the /api url to go to localhost:5000 where the flask back end is running just so that our front end and back run using the same hostname and port.
