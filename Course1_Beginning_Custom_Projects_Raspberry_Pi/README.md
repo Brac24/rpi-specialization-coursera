@@ -26,6 +26,10 @@ The directory react-with-flask is the directory from which to run the react appl
 To run the react web server run: npm run dev
 Before that we need to run: npm install which should install all the node packages required for the react application.
 
+In the react-with-flask/api directory you need to create a python virtual environment with python3 -m venv venv and then run pip install falask python-dotenv.
+
+Then activate venv from the api directory with source venv/bin/activate
+
 In the react-wit-flask directory we need to open two terminal and run the following:
 npm run dev (Runs the front end)
 npm run api (Runs the flask back end)
